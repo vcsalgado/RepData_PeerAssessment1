@@ -94,7 +94,7 @@ names(steps_by_date) <- c("date", "steps")
 hist(steps_by_date$steps, main = "Number of steps taken by day", xlab = "Steps per day", ylab="Frequency", ylim = c(0,20), breaks = seq(0,25000, by=1000))
 ```
 
-![plot of chunk Histogram of the total number of steps](figure/Histogram of the total number of steps-1.png)
+![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4-1.png)
 
 ##### 3. Calculate and report the mean and median of the total number of steps taken per day
 
@@ -131,7 +131,7 @@ label_pos_x <- avg_by_day[which.max(avg_by_day$avg_steps), ]$interval
 ggplot(data=avg_by_day, aes(x=interval, y=avg_steps)) + geom_line() +  xlab("5-minute interval") + ylab("Average number of steps") + ggtitle("Average number of steps by interval") + annotate("text", x= label_pos_x + 20, y= label_pos_y - 25, hjust = 0,  label = label_max)
 ```
 
-![plot of chunk Average across all the days](figure/Average across all the days-1.png)
+![plot of chunk unnamed-chunk-7](figure/unnamed-chunk-7-1.png)
 
 ## Imputing missing values
 ##### 1.Calculate and report the total number of missing values in the dataset (i.e. the total number of rows withvNAs)
@@ -165,7 +165,7 @@ names(fill_steps_by_date) <- c("date", "steps")
 hist(fill_steps_by_date$steps, main = "Number of steps taken by day", xlab = "Steps per day", ylab="Frequency", ylim = c(0,20), breaks = seq(0,25000, by=1000))
 ```
 
-![plot of chunk total number of steps filled](figure/total number of steps filled-1.png)
+![plot of chunk unnamed-chunk-10](figure/unnamed-chunk-10-1.png)
 
 
 ## Are there differences in activity patterns between weekdays and weekends?
@@ -196,6 +196,6 @@ qplot(interval,
   facet_wrap(~ daytype, ncol = 1)
 ```
 
-![plot of chunk Make a panel plot](figure/Make a panel plot-1.png)
+![plot of chunk unnamed-chunk-12](figure/unnamed-chunk-12-1.png)
 
 
